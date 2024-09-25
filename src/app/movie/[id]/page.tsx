@@ -1,7 +1,8 @@
 import React from 'react'
+import { Params } from '../../../../node_modules/next/dist/shared/lib/router/utils/route-matcher';
 import Image from '../../../../node_modules/next/image';
 
-const page = async ({params}:any) => {
+const page = async ({params}:{ params: Params }) => {
     const res = await fetch (`https://api.themoviedb.org/3/movie/${params.id}?api_key=${process.env.API_KEY}`);
     const movie = await res.json();
     //console.log(movie);

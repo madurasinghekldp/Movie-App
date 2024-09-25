@@ -1,7 +1,8 @@
-import Image from "next/image";
+//import Image from "next/image";
+import { Params } from "../../node_modules/next/dist/shared/lib/router/utils/route-matcher";
 import Results from "./components/Results";
 const API_KEY = process.env.API_KEY;
-export default async function Home({searchParams}:any) {
+export default async function Home({searchParams}:{ searchParams: Params }) {
   const genre = searchParams.genre || 'fetchTrending';
   const res = await fetch(
     `https://api.themoviedb.org/3${

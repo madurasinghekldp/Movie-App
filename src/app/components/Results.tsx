@@ -23,7 +23,7 @@ const Results = ({results}:{results: Array<{
         {
             results.map(({ id,title,backdrop_path,poster_path,overview}) => (
                 
-                <Card id={id} title={title} backdrop_path={backdrop_path} poster_path={poster_path} 
+                <Card key ={id} id={id} title={title} backdrop_path={backdrop_path} poster_path={poster_path} 
                 overview={overview}/>
             ))
         }

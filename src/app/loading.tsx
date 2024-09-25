@@ -1,9 +1,10 @@
 import React from 'react'
+import Image from '../../node_modules/next/image'
 
 const loading = () => {
   return (
     <div className='flex justify-center'>
-        <img src="spinner.svg" alt="loading..."/>
+        <Image src="spinner.svg" alt="loading..."/>
     </div>
   )
 }

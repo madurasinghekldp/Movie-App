@@ -1,8 +1,8 @@
 'use client';
 import React from 'react'
-import { useEffect } from 'react';
+import { useEffect } from 'react';  
 
-const error = ({error,reset}:any) => {
+const ErrorComponent = ({error,reset}:{ error: Error; reset: () => void }) => {
     useEffect(()=>{
         console.log(error);
     },[error]);
@@ -17,4 +17,4 @@ const error = ({error,reset}:any) => {
   )
 }
 
-export default error
+export default ErrorComponent

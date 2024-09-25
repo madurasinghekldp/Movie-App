@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Card = ({id,title,backdrop_path,poster_path,overview}:any) => {
+const Card = ({id,title,backdrop_path,poster_path,overview}:
+  {id:number,title:string,backdrop_path:string,poster_path:string,overview:string}) => {
   return (
     <div className='group p-1'>
         <Link href={`/movie/${id}`}>
